@@ -32,3 +32,15 @@ body .bg-img {
     /* so we can position top left/right absolute */
     position: relative;
 }
+
+
+
+
+/******************************
+LOGO
+******************************/
+
+.top-left > p {
+    /* margin was showing up on this p tag for some reason (default displayed as block) */
+    margin: 0;
+}
