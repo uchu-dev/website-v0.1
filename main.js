@@ -23,11 +23,14 @@ var countDownFunction = setInterval(function() {
     var seconds = Math.floor((distance % (1000 % 60)) / 1000);
     
     // outputresult in element (id="jsResult")
-    document.getElementById("jsResult").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
     // display text if countdown is over
-    if (distance < 0) {
-        clearInterval(countDownFunction);
-        document.getElementById("jsResult").innerHTML= "WE'RE LIVE!";
-    }
+    // if (distance < 0) {
+    //     clearInterval(countDownFunction);
+    //     document.getElementById("seconds").innerHTML= "WE'RE LIVE!";
+    // }
 }, 1000);
