@@ -25,15 +25,40 @@ body {
 }
 
 body .bg-img {
+    /* fullscreen background image */
     background-image: url('img/trail.jpg');
     background-position: center;
     background-size: cover;
     height: 100%;
-    /* so we can position top left/right absolute */
+    /* enable absulte positiong within image div */
     position: relative;
 }
 
+.top-left {
+    display: flex;
+    align-items: left;
+    /* justify-content: center; */
+}
 
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-left {
+    display: flex;
+    align-items: left;
+}
+
+
+/* HACKED THE HECK OUT OF THE TOP -->
+  - GONG TO WORK ON JAVASCRIPT NOW
+  - LATER WHEN THE JS IS WORKING I WILL MAKE THREE DIVS
+     - TOP LEFT DIV WILL BE FLEX LEFT (10VH)
+     - CENTER DIV WILL BE FLEX CENTER (80VH)
+     - BOTTOM LEFT WILL BE FLEX LEFT (10VH) */
 
 
 /******************************
