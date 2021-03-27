@@ -2,25 +2,22 @@
 // https://calendly.com/dev-friends/30-minute-chat?month=2021-03
 
 
-
 // store the date we'll count down to (release date)
-let countDownDate = new Date('July 1, 2021 00:00:00').getTime();
+let count = new Date('jun 16, 2021 00:00:00').getTime();
 
 
 // update count down every second
-var countDownFunction = setInterval(function() {
+var x = setInterval(function() {
 
-    // current date and time
+    // current time + time till release
     var now = new Date().getTime();
+    var diff = count - now;
 
-    // time left till release
-    var distance = countDownDate - now;
-
-    // time calculation for days, hours, minutes, seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 % 60)) / 1000);
+    // time calc for days, hours, minutes, seconds
+    var days = Math.floor(diff / (1000*60*60*24));
+    var hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    var minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+    var seconds = Math.floor((diff % (1000*60)) / 1000);
     
     // outputresult in element (id="jsResult")
     document.getElementById("days").innerHTML = days;
@@ -28,9 +25,10 @@ var countDownFunction = setInterval(function() {
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
 
-    // display text if countdown is over
-    // if (distance < 0) {
-    //     clearInterval(countDownFunction);
-    //     document.getElementById("seconds").innerHTML= "WE'RE LIVE!";
-    // }
+    // countdown over display text + hide count
+    if (diff <= 0) {
+        clearInterval(x);
+        document.getElementById("status").innerHTML= "We are officially a company!";
+        document.getElementById("count").style.display="none";
+    }
 }, 1000);
