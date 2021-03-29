@@ -3,7 +3,7 @@
 
 
 // store the date we'll count down to (release date)
-let count = new Date('jun 16, 2021 00:00:00').getTime();
+let count = new Date('july 1, 2021 00:00:00').getTime();
 
 
 // update count down every second
