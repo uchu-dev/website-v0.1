@@ -1,6 +1,5 @@
-// THANKS FOR CHECKING OUT THE CODE. SHARE ADVICE OR GET IN TOUCH ANYTIME BELOW:
+// THANKS FOR CHECKING OUT THE CODE! SHARE ADVICE OR GET IN TOUCH ANYTIME BELOW:
 // https://calendly.com/dev-friends/30-minute-chat?month=2021-03
-
 
 // store the date we'll count down to (release date)
 let count = new Date('july 1, 2021 00:00:00').getTime();
